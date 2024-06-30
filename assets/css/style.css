@@ -44,8 +44,7 @@ body {
     background-position: center;
     border: 10px solid white;
     border-radius: 8%;
-}
-.sidebar .step {
+}.sidebar .step {
     margin-bottom: 40px;
     display: flex;
 }
@@ -95,7 +94,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 4px;
 }
-.next-step {
+.next-step, .prev-step, .submit {
     background-color: #172557;
     color: white;
     padding: 10px 20px;

@@ -11,49 +11,65 @@
 <body>
   <div class="container">
     <div class="sidebar">
-      <div class="step active">
+      <div class="step active" data-step="1">
         <div class="number">1</div>
-        <div class="stage">STEP 1<br>
+        <div class="stage">STEP 1
           <div class="stage-info">YOUR INFO</div>
         </div>
       </div>
-      <div class="step">
+      <div class="step" data-step="2">
         <div class="number">2</div>
-        <div class="stage">STEP 2<br>
+        <div class="stage">STEP 2
           <div class="stage-info">SELECT PLAN</div>
         </div>
       </div>
-      <div class="step">
+      <div class="step" data-step="3">
         <div class="number">3</div>
-        <div class="stage">STEP 3<br>
+        <div class="stage">STEP 3
           <div class="stage-info">ADD-ONS</div>
         </div>
       </div>
-      <div class="step">
+      <div class="step" data-step="4">
         <div class="number">4</div>
-        <div class="stage">STEP 4<br>
+        <div class="stage">STEP 4
           <div class="stage-info">SUMMARY</div>
         </div>
       </div>
-    </div>
-    <div class="form-container">
-      <h2>Personal info</h2>
-      <p class="form-p">Please provide your name, email address, and phone number.</p>
-      <div class="form-group">
-        <label for="name">Name</label>
-        <input type="text" id="name" placeholder="e.g. Stephen King">
+    </div>  <form class="form-container">
+      <div class="form-step" data-step="1">
+          <h2>Personal info</h2>
+          <p class="form-p">Please provide your name, email address, and phone number.</p>
+          <div class="form-group">
+              <label for="name">Name</label>
+              <input type="text" id="name" placeholder="e.g. Stephen King" required>
+          </div>
+          <div class="form-group">
+              <label for="email">Email Address</label>
+              <input type="email" id="email" placeholder="e.g. stephenking@lorem.com" required>
+          </div>
+          <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="e.g. +1 234 567 890" required>
+          </div>
+          <button type="button" class="next-step" data-next-step="2">Next Step</button>
       </div>
-      <div class="form-group">
-        <label for="email">Email Address</label>
-        <input type="email" id="email" placeholder="e.g. stephenking@lorem.com">
+      <div class="form-step" data-step="2" style="display:none;">
+          <h2>Select Plan</h2>
+          <button type="button" class="prev-step" data-prev-step="1">Previous Step</button>
+          <button type="button" class="next-step" data-next-step="3">Next Step</button>
       </div>
-      <div class="form-group">
-        <label for="phone">Phone Number</label>
-        <input type="tel" id="phone" placeholder="e.g. +1 234 567 890">
+      <div class="form-step" data-step="3" style="display:none;">
+          <h2>Add-Ons</h2>
+          <button type="button" class="prev-step" data-prev-step="2">Previous Step</button>
+          <button type="button" class="next-step" data-next-step="4">Next Step</button>
       </div>
-      <button class="next-step">Next Step</button>
-    </div>
-  </div>
+      <div class="form-step" data-step="4" style="display:none;">
+          <h2>Summary</h2>
+          <button type="button" class="prev-step" data-prev-step="3">Previous Step</button>
+          <button type="submit" class="submit">Submit</button>
+      </div>
+  </form>
+</div>
+<script src="assets/scripts/index.js"></script>
 </body>
-
 </html>
