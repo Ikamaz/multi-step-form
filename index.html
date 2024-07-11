@@ -55,10 +55,32 @@
           <button type="button" class="next-step" data-next-step="2">Next Step</button>
       </div>
       <div class="form-step" data-step="2" style="display:none;">
-          <h2>Select Plan</h2>
-          <button type="button" class="prev-step" data-prev-step="1">Previous Step</button>
-          <button type="button" class="next-step" data-next-step="3">Next Step</button>
-      </div>
+        <h2>Select Plan</h2>
+        <div class="plans">
+            <div class="plan" data-plan="1">
+                <h3>Basic Plan</h3>
+                <p class="price yearly">$90/year</p>
+                <p class="price monthly" style="display:none;">$10/month</p>
+            </div>
+            <div class="plan" data-plan="2">
+                <h3>Standard Plan</h3>
+                <p class="price yearly">$120/year</p>
+                <p class="price monthly" style="display:none;">$12/month</p>
+            </div>
+            <div class="plan" data-plan="3">
+                <h3>Premium Plan</h3>
+                <p class="price yearly">$150/year</p>
+                <p class="price monthly" style="display:none;">$15/month</p>
+            </div>
+        </div>
+        <label class="switch">
+            <input type="checkbox" id="billing-toggle">
+            <span class="slider round"></span>
+        </label>
+        <span class="billing-text">Monthly Billing</span>
+        <button type="button" class="prev-step" data-prev-step="1">Previous Step</button>
+        <button type="button" class="next-step" data-next-step="3">Next Step</button>
+    </div>
       <div class="form-step" data-step="3" style="display:none;">
           <h2>Add-Ons</h2>
           <button type="button" class="prev-step" data-prev-step="2">Previous Step</button>
